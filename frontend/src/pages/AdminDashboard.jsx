@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import socket from '../socket';
 
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = process.env.NODE_ENV === 'production' 
+  ? 'https://harvesthub-backend-siy2.onrender.com' 
+  : 'http://localhost:5000';
 
 const AdminDashboard = () => {
   const [requests, setRequests] = useState([]);
@@ -192,5 +194,6 @@ const AdminDashboard = () => {
     </div>
   );
 };
+
 
 export default AdminDashboard;

@@ -6,7 +6,9 @@ const RequestList = () => {
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  axios.defaults.baseURL = 'http://localhost:5000';
+  axios.defaults.baseURL = process.env.NODE_ENV === 'production' 
+  ? 'https://harvesthub-backend-siy2.onrender.com' 
+  : 'http://localhost:5000';
 
   useEffect(() => {
     const fetchRequests = async () => {

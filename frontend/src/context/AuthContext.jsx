@@ -2,7 +2,9 @@ import { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 const AuthContext = createContext();
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = process.env.NODE_ENV === 'production' 
+  ? 'https://harvesthub-backend-siy2.onrender.com' 
+  : 'http://localhost:5000';
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);

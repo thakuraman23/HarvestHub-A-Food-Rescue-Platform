@@ -67,8 +67,8 @@ Before running this application, make sure you have:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/harvesthub.git
-cd harvesthub
+git clone [https://github.com/yourusername/harvesthub.git](https://github.com/thakuraman23/HarvestHub-A-Food-Rescue-Platform.git)
+cd HarvestHub
 ```
 
 ### 2. Backend Setup
